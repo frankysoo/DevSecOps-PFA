@@ -1,4 +1,3 @@
-```markdown
 # Git Basics for Security
 
 This document outlines how Git supports secure software development practices and why it’s a vital tool for our project.
