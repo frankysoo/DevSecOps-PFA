@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %></title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    h1, h2, h3, .display-4 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 90vh;
+      background: url('https://source.unsplash.com/1600x900/?cybersecurity,technology') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInDown 1s ease-in-out;
+      color: #fff;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Features Section */
+    .features {
+      padding: 4rem 0;
+      background-color: #fff;
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      background-color: #fff;
+      border-radius: 0.5rem;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .feature-text {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #343a40;
+      color: #ccc;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    footer a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <%- include('partials/header') %>
+  
+  <!-- Hero Section -->
+  <section class="hero" role="banner">
+    <div class="hero-content container">
+      <h1 class="display-4">DevSecOps-PFA</h1>
+      <p class="lead">Integrating cybersecurity, networking, and SIEM for a secure and efficient CI/CD pipeline.</p>
+      <a href="/about" class="btn btn-lg btn-primary">Discover More</a>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card p-4">
+            <div class="card-body">
+              <i class="bi bi-shield-lock feature-icon"></i>
+              <div class="feature-title">Robust Security</div>
+              <p class="feature-text">Implement advanced security measures at every stage of your pipeline.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card p-4">
+            <div class="card-body">
+              <i class="bi bi-gear feature-icon"></i>
+              <div class="feature-title">CI/CD Automation</div>
+              <p class="feature-text">Automate builds, tests, and deployments for continuous integration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card p-4">
+            <div class="card-body">
+              <i class="bi bi-bar-chart-line feature-icon"></i>
+              <div class="feature-title">Real-Time Monitoring</div>
+              <p class="feature-text">Monitor system performance and security in real time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <%= new Date().getFullYear() %> DevSecOps-PFA. All Rights Reserved.</p>
+      <p><a href="/about">Learn more about this project</a></p>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.jumbotron {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.card {
+  border: none;
+}
+
+.card-header {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.container {
+  max-width: 960px;
+}
+
