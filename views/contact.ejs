@@ -13,12 +13,26 @@
   <!-- Header -->
   <%- include('partials/header') %>
   
-  <!-- About Section -->
+  <!-- Contact Section -->
   <section class="py-5">
     <div class="container">
-      <h1 class="display-4">About DevSecOps-PFA</h1>
-      <p class="lead">This project integrates cybersecurity, networking, and SIEM for a secure and efficient CI/CD pipeline.</p>
-      <p>Our goal is to build an automated CI/CD pipeline for a web application that features a professional and visually stunning homepage.</p>
+      <h1 class="display-4">Contact Us</h1>
+      <p class="lead">Reach out to us for any queries or support.</p>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
   </section>
   
